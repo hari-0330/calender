@@ -76,7 +76,7 @@ export default function App() {
 
   const fetchEvents = async () => {
     if (!idToken) return;
-    const res = await fetch(`http://localhost:5000/api/events?year=${year}&month=${month}`, {
+    const res = await fetch(`https://calender-9oup.onrender.com/api/events?year=${year}&month=${month}`, {
       headers: { Authorization: `Bearer ${idToken}` }
     });
     const data = await res.json();
