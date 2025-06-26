@@ -94,7 +94,7 @@ export default function App() {
 
   const handleAddEvent = async () => {
     if (!selectedDay || !eventInput.trim() || !idToken) return;
-    await fetch('http://localhost:5000/api/events', {
+    await fetch('https://calender-9oup.onrender.com/api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ export default function App() {
     await handleReplaceEvents(updated);
   };
   const handleReplaceEvents = async (newEvents) => {
-    await fetch('http://localhost:5000/api/events', {
+    await fetch('https://calender-9oup.onrender.com/api/events', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
